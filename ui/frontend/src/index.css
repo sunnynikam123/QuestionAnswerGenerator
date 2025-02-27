@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,body,#root,.bodyp{
+  min-height:  100vh;
+}
+#root{
+  @apply dark:bg-zinc-750 dark:text-zinc-100;
+
+}
+@keyframes move {
+  0%{
+  transform: translateX(0);
+}
+50%{
+    transform: translateX(1167px);
+
+  }
+100%{
+    transform: translateX(0%);
+
+  }
+}
+@keyframes opacty {
+  from{
+    opacity: 30%;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+.animationmo{
+  /* transition: all ease-in-out 3s; */
+  animation: move infinite 2s;
+}
+.opani{
+  animation: opacty infinite 2s;
+}
+pre p{
+  @apply dark:bg-zinc-850 bg-slate-300 mb-[.5rem] p-2 rounded-md;
+  margin-bottom:-.8rem 
+}
